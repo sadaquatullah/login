@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .dashboard {
+            width: 100%;
+            max-width: 1000px;
+            background: rgba(15, 23, 42, 0.95);
+            border-radius: 18px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+
+        .dashboard-header {
+            padding: 28px 36px;
+            background: rgba(30, 41, 59, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dashboard-header h1 {
+            font-size: 28px;
+            letter-spacing: 0.5px;
+        }
+
+        .dashboard-header a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 30px 36px 40px;
+        }
+
+        .card {
+            background: rgba(226, 232, 240, 0.08);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 16px;
+            padding: 24px;
+            min-height: 180px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 14px;
+            color: #e2e8f0;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+
+        .stat {
+            font-size: 36px;
+            margin-top: 12px;
+            color: #7dd3fc;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 600px) {
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="dashboard">
+        <header class="dashboard-header">
+            <div>
+                <h1>Welcome to your dashboard</h1>
+                <p style="color:#94a3b8; margin-top: 8px;">Overview of recent activity and quick links.</p>
+            </div>
+            <a href="login.html">Back to login</a>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="card">
+                <h2>Tasks Completed</h2>
+                <div class="stat">24</div>
+                <p>Track your most recent tasks and progress in one place.</p>
+            </div>
+            <div class="card">
+                <h2>Active Projects</h2>
+                <div class="stat">6</div>
+                <p>Manage your ongoing projects and stay focused on what matters.</p>
+            </div>
+            <div class="card">
+                <h2>Messages</h2>
+                <div class="stat">12</div>
+                <p>Review your latest notifications and stay connected.</p>
+            </div>
+            <div class="card full-width">
+                <h2>Daily summary</h2>
+                <p>Today is a great day to complete your goals. Keep your workflow smooth and check back later for more updates.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

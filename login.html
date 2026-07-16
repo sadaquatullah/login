@@ -81,12 +81,35 @@
 
         
         <form class="login">
-            <input type="email"name="" id="" placeholder="Email">
-            <input type="password" name="" id="" placeholder="Password">
-            <button type="submit" class="btn">login</button>
+            <input type="email"name="" id="username" placeholder="Email">
+            <input type="password" name="" id="password" placeholder="Password">
+            <button type="submit" class="btn" onclick="handleLogin(event)">login</button>
 
         </form>
     </div>
 </div>
+
+<script>
+
+    function handleLogin(event) {
+        event.preventDefault(); // Prevent form submission
+    
+    // Get input values
+    var user = document.getElementById("username").value;
+    var pass = document.getElementById("password").value;
+
+    console.log(user, pass);
+    
+    // Check credentials
+    if (user === "admin@gmail.com" && pass === "1234") {
+        alert("Login Successful!");
+        window.location.href = "dashboard.html"; // Redirect on success
+    } else {
+        alert("Invalid Username or Password"); // Show error on failure
+    }
+}
+  
+    </script>
+
 </body>
 </html>
