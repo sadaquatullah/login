@@ -98,14 +98,12 @@
     var user = document.getElementById("username").value;
     var pass = document.getElementById("password").value;
 
-    console.log(user, pass);
     
     // Check credentials
     if (user === "admin@gmail.com" && pass === "1234") {
-        alert("Login Successful!");
         window.location.href = "dashboard.html"; // Redirect on success
     } else {
-        alert("Invalid Username or Password"); // Show error on failure
+        console.log("Invalid Username or Password"); // Show error on failure
     }
 }
   
